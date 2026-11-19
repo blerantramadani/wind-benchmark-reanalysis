@@ -1,0 +1,24 @@
+{
+  "description": "Fixed analysis choices of the multi-year reanalysis. Written before the 2016-2017 and 2019-2023 data were opened (3 Nov 2026); later changes are listed in PROTOCOL.md (section \"Changes after approval\").",
+  "sites": {
+    "kelmarsh": {"archive_prefix": "Kelmarsh_SCADA_", "turbine_tag": "Kelmarsh_1_"},
+    "penmanshiel": {"archive_prefix": "Penmanshiel_SCADA_", "turbine_tag": "Penmanshiel_01_", "archive_must_contain": "01-10"}
+  },
+  "years": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+  "test_years": [2019, 2020, 2021, 2022, 2023],
+  "horizons_h": [1, 2, 3, 6, 12, 18, 24, 36, 48],
+  "targets": ["normal", "all_states"],
+  "rated_kw": 2050.0,
+  "look_back_h": 48,
+  "min_values_per_hour": 4,
+  "invalid_if_wind_below_ms_and_power_above_kw": [2.0, 100.0],
+  "negative_power": "clip hourly mean at zero after averaging",
+  "ar_max_order": 5,
+  "curve_bins": 40,
+  "curve_min_count": 20,
+  "curve_upper_percentile": 99.5,
+  "quadrature_nodes": 64,
+  "seeds": 10,
+  "bootstrap": {"resamples": 1000, "block_hours": 48, "seed": 20261103},
+  "networks_2019": {"test_year": 2019, "target": "normal", "horizons_h": [1, 3, 6, 12, 24, 48], "models": ["LSTM", "GRU", "DLinear", "PatchTST"]}
+}

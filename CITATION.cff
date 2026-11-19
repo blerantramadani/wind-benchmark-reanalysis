@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it together with the preprint and the Zenodo data releases listed in DATA.md."
+title: "Wind-benchmark reanalysis: multi-year evaluation of a model-conditional wind-only predictability benchmark"
+version: 1.0.0
+doi: 10.5281/zenodo.24355795
+date-released: 2026-11-19
+repository-code: "https://github.com/blerantramadani/wind-benchmark-reanalysis"
+type: software
+license: MIT
+authors:
+  - family-names: Ramadani
+    given-names: Blerant
+    affiliation: "Faculty of Technical Sciences, Mother Teresa University, Skopje; Faculty of Electrical Engineering and Information Technologies, Ss. Cyril and Methodius University in Skopje"
+    orcid: "https://orcid.org/0000-0002-4453-9644"
+  - family-names: Fustic
+    given-names: Vangel
+    affiliation: "Faculty of Electrical Engineering and Information Technologies, Ss. Cyril and Methodius University in Skopje"
+references:
+  - type: article
+    title: "A Semi-Analytic Wind-State Predictability Benchmark for Single-Turbine Wind Power Forecasting"
+    authors:
+      - family-names: Ramadani
+        given-names: Blerant
+      - family-names: Fustic
+        given-names: Vangel
+    journal: "Wind Energy Science Discussions"
+    doi: 10.5194/wes-2026-154
+    year: 2026

@@ -1,0 +1,18 @@
+{
+  "test_targets_in_train_total": 0,
+  "test_targets_in_val_total": 0,
+  "removed_equals_h_minus_1": true,
+  "baseline_recompute_max_diff_pp": 3.552713678800501e-15,
+  "wpc_change_pp_range": [
+    -0.14894919376375526,
+    0.16931999257317898
+  ],
+  "lr_change_pp_range": [
+    -0.015098684297921494,
+    0.10856558953993556
+  ],
+  "bench_change_pp_range": [
+    -0.019140159561629844,
+    0.05298271849029845
+  ]
+}

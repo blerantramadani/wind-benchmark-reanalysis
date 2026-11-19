@@ -1,0 +1,31 @@
+# Changelog
+
+## 1.0.0 (2026-11-19)
+
+Archived on Zenodo: https://doi.org/10.5281/zenodo.24355795.
+
+- Multi-year reanalysis 2016–2023 for Kelmarsh 1 and Penmanshiel 01: download with md5 checks, preprocessing, purged chronological splits, benchmark and model forecasts at every test origin, persistence, linear regression and MLP for five test years, sequence networks for 2019, bootstrap intervals, tables.
+- Unit tests for the hour convention, power clipping, stop flags, split purging, AR moments, BIC order selection and quadrature against Monte Carlo; quick reproduction check against `expected/`.
+- Relation to the preprint repository (github.com/blerantramadani/wind-state-predictability-benchmark, commit 13c0bba): the benchmark functions are taken unchanged; the preprocessing, splits and evaluation differ as described in `PROTOCOL.md` and in the author response to RC1.
+- Season bootstrap blocks are drawn within continuous runs of the calendar (`results.block_weights`); for a full year the draws are the same as before.
+- Restart safety: a forecast cell counts as finished only when its validation and test files and a record with the hash of `config/protocol.json` exist; `--no-mlp` never overwrites MLP forecasts; all forecast files are written under a temporary name and renamed.
+- `scripts/quadrature_check.py`: benchmark and model forecast with 64, 128 and 256 Gauss-Hermite nodes for all 180 cells.
+- `expected/`: point estimates, intervals, benchmark summary, tables and headline counts of the published run, all written by this code.
+- `CLAIMS.md` lists every multi-year number in the reply to RC1 with its file, rows and column; `tests/test_claims.py` checks each one against `expected/`.
+- README: measured run times; BLAS threads when several processes run at once; TensorFlow thread setting of the archived MLP forecasts.
+- `config/protocol.json`: the description pointed to `PROTOCOL_CHANGES.md`, which does not exist; it now points to `PROTOCOL.md`. No setting changed.
+- `wbr check --intervals` also compares the intervals of a full run with `expected/`; missing columns and one-sided missing values now count as differences.
+- DATA.md lists every difference from the preprint's 2018 hourly files, including 18 hours with fewer than four ten-minute values that the preprint kept.
+- 2018 analyses (`wbr y2018`, `src/wbr/y2018/`): reproduction of the 126 published scores and of the preprint's splits and hour convention; status logs and the state filter (point 1); Figure 1 on several grids, the unit of the Taylor percentages and the comparison on smooth curves (points 2 and 3a); benchmark and errors on the same test origins with bootstrap intervals, the model's own forecasts and the block-length check (point 3b(ii)); purged splits and the networks retrained at 48 h (point 4). Inputs are the preprint files (`preprint/`) and archived forecasts (`archived/`), both with SHA-256 sums. All outputs reproduce the analysis behind the reply exactly; `wbr check --y2018` compares them with `expected/y2018/`, and `tests/test_claims_2018.py` checks every 2018 number of the reply.
+- `wbr networks`: a cell counts as finished only with a record `<cell>_done.json` (protocol hash, stopping epochs, run time, threads, TensorFlow version); `run_log_<site>.csv` is rebuilt from these records, so a restart no longer drops earlier rows; the forecast files also hold the target time and the observed power.
+- `wbr results` and `wbr check`: the sequence networks are candidates in the 2019 selection for the normal target at their six horizons (`PROTOCOL.md`, 7 Nov 2026); `--no-networks` leaves them out; the point estimates are then byte-identical to those of the reply, and the bootstrap draws do not change, because the random numbers are drawn in the same order. `wbr all` now trains the networks too; `wbr all --no-networks` skips them.
+- Tests for the selection rule and for the rows of the networks; the reproduction test runs with `--no-networks` while `expected/` holds the results of the reply.
+- Stored forecast files (`outputs/forecasts`, for the Zenodo record): when the archived MLP forecasts were added on 7 Nov, the files were read with the default float parser of pandas and written back, which changed persistence and linear regression by up to 2.3 × 10⁻¹³ kW in some rows. The files were rebuilt: persistence and linear regression from a fresh run, the MLP column read exactly from the archived forecasts. Each file is now the fresh file plus the MLP column; the point estimates and the bootstrap draws are byte-identical to before.
+- `python -m wbr.y2018.purging`: retrains the five networks of the preprint at 2, 3, 6, 12, 18, 24 and 36 h with the original and the purged splits (point 4 of the reply: "retrain all networks under it"); restartable, one record per unit. The training of one unit is factored out of `retrain`, which keeps its output at 48 h. `wbr y2018` writes `retrained_scores.csv` for all eight horizons once `archived/retrained_2018` is complete.
+- `wbr networks --horizons`: runs the given horizons in the given order, so two processes can share a site and model; a process that finishes a cell already written by another discards its own forecasts, so the files of a cell come from one run.
+- `wbr tables --blocks 24,48,96`: block-length sensitivity of the intervals (`block_sensitivity.md` and `.csv`).
+- CI: unit tests on Linux and macOS (Python 3.9 and 3.12) and one job with the versions of `requirements.txt`; no test needs TensorFlow or SCADA data. `.gitattributes` keeps checked files byte-identical.
+- Sequence networks for 2019 trained (48 cells, ten seeds) and archived for the Zenodo record; `expected/revision/` holds the results with the networks: point estimates and intervals with blocks of 24, 48 and 96 h, the block-length sensitivity, tables and summary. `expected/` keeps the results of the reply.
+- The five networks of the preprint retrained at 2, 3, 6, 12, 18, 24 and 36 h with original and purged splits, archived in `archived/retrained_2018` with SHA-256 sums; `expected/y2018/retrained_scores.csv` holds their scores at all eight horizons.
+- The record of each retrained unit is written under a temporary name and renamed, so an interrupted run cannot leave a record without forecasts.
+- `tests/test_revision.py` and a Revision section in `CLAIMS.md`.

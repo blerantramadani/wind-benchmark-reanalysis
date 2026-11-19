@@ -1,0 +1,44 @@
+{
+  "normal": {
+    "pooled_selected_gap_range_pp": [
+      -0.9,
+      0.31
+    ],
+    "pooled_selected_intervals_above_zero": 0,
+    "pooled_selected_intervals_below_zero": 3,
+    "pooled_model_forecast_gap_range_pp": [
+      -0.42,
+      0.92
+    ],
+    "pooled_model_forecast_testonly_above_zero": 1,
+    "pooled_model_forecast_testonly_below_zero": 0,
+    "single_year_selected_gap_range_pp": [
+      -2.54,
+      3.11
+    ],
+    "single_year_selected_intervals_above_zero": 7,
+    "single_year_selected_intervals_below_zero": 17,
+    "single_year_cells": 90
+  },
+  "all_states": {
+    "pooled_selected_gap_range_pp": [
+      -1.44,
+      0.43
+    ],
+    "pooled_selected_intervals_above_zero": 0,
+    "pooled_selected_intervals_below_zero": 8,
+    "pooled_model_forecast_gap_range_pp": [
+      -1.19,
+      0.99
+    ],
+    "pooled_model_forecast_testonly_above_zero": 1,
+    "pooled_model_forecast_testonly_below_zero": 6,
+    "single_year_selected_gap_range_pp": [
+      -2.84,
+      3.32
+    ],
+    "single_year_selected_intervals_above_zero": 5,
+    "single_year_selected_intervals_below_zero": 21,
+    "single_year_cells": 90
+  }
+}

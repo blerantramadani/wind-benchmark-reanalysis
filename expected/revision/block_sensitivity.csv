@@ -1,0 +1,25 @@
+block_hours,target,method,scope,cells,above_zero,below_zero,median_width_pp
+24,normal,Selected,pooled 2019-2023,18,0,4,1.0841754679883322
+48,normal,Selected,pooled 2019-2023,18,0,3,1.207746782169202
+96,normal,Selected,pooled 2019-2023,18,0,3,1.3842900678973553
+24,normal,Selected,single years,90,8,18,2.394527686658379
+48,normal,Selected,single years,90,7,17,2.6937414673158955
+96,normal,Selected,single years,90,6,15,2.9985391476579535
+24,normal,Bayes_main,pooled 2019-2023,18,1,0,0.9082043081743689
+48,normal,Bayes_main,pooled 2019-2023,18,1,0,0.9959821309542137
+96,normal,Bayes_main,pooled 2019-2023,18,0,0,1.0979793596572074
+24,normal,Bayes_main,single years,90,12,18,1.9354444642356818
+48,normal,Bayes_main,single years,90,11,15,2.1308165252361455
+96,normal,Bayes_main,single years,90,9,13,2.377232770272637
+24,all_states,Selected,pooled 2019-2023,18,0,8,1.175835362643444
+48,all_states,Selected,pooled 2019-2023,18,0,8,1.2881339188394787
+96,all_states,Selected,pooled 2019-2023,18,0,6,1.4771790057658594
+24,all_states,Selected,single years,90,5,23,2.6081686483684674
+48,all_states,Selected,single years,90,5,21,2.9640166323621235
+96,all_states,Selected,single years,90,5,15,3.3916457709655434
+24,all_states,Bayes_main,pooled 2019-2023,18,2,7,0.9611927984140821
+48,all_states,Bayes_main,pooled 2019-2023,18,1,6,1.0408430884093733
+96,all_states,Bayes_main,pooled 2019-2023,18,0,6,1.1567420701008182
+24,all_states,Bayes_main,single years,90,7,21,2.0477474119917725
+48,all_states,Bayes_main,single years,90,7,19,2.2925008527562554
+96,all_states,Bayes_main,single years,90,7,17,2.495295868784086

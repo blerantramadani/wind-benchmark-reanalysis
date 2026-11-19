@@ -1,0 +1,46 @@
+{
+  "kelmarsh_all_hours_logistic": {
+    "a": -35.901335028089576,
+    "b": 2143.544064097012,
+    "c": 7.9570600857993385,
+    "s": 1.502260569933778,
+    "weighted_rmse_kw": 18.258657518899827
+  },
+  "kelmarsh_all_hours_spline": {
+    "knots": 10.0,
+    "weighted_rmse_kw": 12.437187604404484
+  },
+  "kelmarsh_without_stops_logistic": {
+    "a": -36.664343120423105,
+    "b": 2186.518797769947,
+    "c": 7.978782526786986,
+    "s": 1.5103636459816805,
+    "weighted_rmse_kw": 15.199936067588435
+  },
+  "kelmarsh_without_stops_spline": {
+    "knots": 11.0,
+    "weighted_rmse_kw": 3.8720074952639263
+  },
+  "penmanshiel_all_hours_logistic": {
+    "a": -63.08540504897069,
+    "b": 2037.1478719133559,
+    "c": 8.697412435307609,
+    "s": 1.7261976048921177,
+    "weighted_rmse_kw": 16.27294273707404
+  },
+  "penmanshiel_all_hours_spline": {
+    "knots": 13.0,
+    "weighted_rmse_kw": 11.809168895767543
+  },
+  "penmanshiel_without_stops_logistic": {
+    "a": -64.32203718997103,
+    "b": 2058.372056749793,
+    "c": 8.717172643063176,
+    "s": 1.7386573545016035,
+    "weighted_rmse_kw": 14.533444807619254
+  },
+  "penmanshiel_without_stops_spline": {
+    "knots": 10.0,
+    "weighted_rmse_kw": 5.751979810169439
+  }
+}

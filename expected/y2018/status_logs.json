@@ -1,0 +1,328 @@
+{
+  "kelmarsh": {
+    "events_total": 10674,
+    "events_with_duration": 1449,
+    "point_events": 9225,
+    "status_counts_with_duration": {
+      "Informational": 1226,
+      "Stop": 126,
+      "Warning": 82,
+      "Communication": 15
+    },
+    "hours": {
+      "pretest": 7470,
+      "test": 1000
+    },
+    "hours_touched_pretest": {
+      "stop": 206,
+      "Forced outage": 70,
+      "Scheduled Maintenance": 42,
+      "Technical Standby": 142,
+      "Requested Shutdown": 8,
+      "Out of Electrical Specification": 8,
+      "Out of Environmental Specification": 776,
+      "Full Performance": 90,
+      "communication": 28
+    },
+    "hours_touched_test": {
+      "stop": 12,
+      "Forced outage": 1,
+      "Scheduled Maintenance": 2,
+      "Technical Standby": 8,
+      "Requested Shutdown": 0,
+      "Out of Electrical Specification": 1,
+      "Out of Environmental Specification": 27,
+      "Full Performance": 11,
+      "communication": 1
+    },
+    "zero_output_hours": {
+      "power<=0_wind>5": {
+        "hours": 62,
+        "with_stop": 62
+      },
+      "power<=0_wind>10": {
+        "hours": 13,
+        "with_stop": 13
+      }
+    },
+    "hours_per_retained_bin_above_10ms": [
+      110,
+      107,
+      84,
+      83,
+      59,
+      41,
+      32,
+      30,
+      21,
+      23
+    ],
+    "valid_share_by_month": {
+      "2018-01": {
+        "wind": 0.997,
+        "power": 0.997,
+        "nacelle_temperature": 0.997
+      },
+      "2018-02": {
+        "wind": 1.0,
+        "power": 1.0,
+        "nacelle_temperature": 1.0
+      },
+      "2018-03": {
+        "wind": 0.998,
+        "power": 0.998,
+        "nacelle_temperature": 0.998
+      },
+      "2018-04": {
+        "wind": 1.0,
+        "power": 1.0,
+        "nacelle_temperature": 1.0
+      },
+      "2018-05": {
+        "wind": 0.996,
+        "power": 0.996,
+        "nacelle_temperature": 0.996
+      },
+      "2018-06": {
+        "wind": 0.968,
+        "power": 0.968,
+        "nacelle_temperature": 0.968
+      },
+      "2018-07": {
+        "wind": 0.999,
+        "power": 0.999,
+        "nacelle_temperature": 0.999
+      },
+      "2018-08": {
+        "wind": 1.0,
+        "power": 1.0,
+        "nacelle_temperature": 1.0
+      },
+      "2018-09": {
+        "wind": 1.0,
+        "power": 1.0,
+        "nacelle_temperature": 1.0
+      },
+      "2018-10": {
+        "wind": 0.694,
+        "power": 0.694,
+        "nacelle_temperature": 0.694
+      },
+      "2018-11": {
+        "wind": 0.943,
+        "power": 0.943,
+        "nacelle_temperature": 0.943
+      },
+      "2018-12": {
+        "wind": 0.999,
+        "power": 0.999,
+        "nacelle_temperature": 0.999
+      }
+    }
+  },
+  "penmanshiel": {
+    "events_total": 7625,
+    "events_with_duration": 1675,
+    "point_events": 5950,
+    "status_counts_with_duration": {
+      "Informational": 1448,
+      "Stop": 153,
+      "Warning": 63,
+      "Communication": 11
+    },
+    "hours": {
+      "pretest": 5432,
+      "test": 1000
+    },
+    "hours_touched_pretest": {
+      "stop": 107,
+      "Forced outage": 23,
+      "Scheduled Maintenance": 19,
+      "Technical Standby": 50,
+      "Requested Shutdown": 0,
+      "Out of Electrical Specification": 2,
+      "Out of Environmental Specification": 585,
+      "Full Performance": 1104,
+      "communication": 21
+    },
+    "hours_touched_test": {
+      "stop": 34,
+      "Forced outage": 8,
+      "Scheduled Maintenance": 14,
+      "Technical Standby": 8,
+      "Requested Shutdown": 0,
+      "Out of Electrical Specification": 0,
+      "Out of Environmental Specification": 106,
+      "Full Performance": 12,
+      "communication": 1
+    },
+    "zero_output_hours": {
+      "power<=0_wind>5": {
+        "hours": 19,
+        "with_stop": 19
+      },
+      "power<=0_wind>10": {
+        "hours": 8,
+        "with_stop": 8
+      }
+    },
+    "hours_per_retained_bin_above_10ms": [
+      146,
+      110,
+      93,
+      82,
+      69,
+      66,
+      50,
+      46,
+      48,
+      48,
+      26,
+      31,
+      20,
+      22,
+      27,
+      21,
+      21,
+      20
+    ],
+    "valid_share_by_month": {
+      "2018-01": {
+        "wind": 0.999,
+        "power": 0.999,
+        "nacelle_temperature": 0.999
+      },
+      "2018-02": {
+        "wind": 1.0,
+        "power": 1.0,
+        "nacelle_temperature": 0.25
+      },
+      "2018-03": {
+        "wind": 1.0,
+        "power": 1.0,
+        "nacelle_temperature": 0.0
+      },
+      "2018-04": {
+        "wind": 1.0,
+        "power": 1.0,
+        "nacelle_temperature": 0.522
+      },
+      "2018-05": {
+        "wind": 1.0,
+        "power": 1.0,
+        "nacelle_temperature": 0.015
+      },
+      "2018-06": {
+        "wind": 0.981,
+        "power": 0.981,
+        "nacelle_temperature": 0.981
+      },
+      "2018-07": {
+        "wind": 1.0,
+        "power": 1.0,
+        "nacelle_temperature": 0.999
+      },
+      "2018-08": {
+        "wind": 0.999,
+        "power": 0.999,
+        "nacelle_temperature": 0.999
+      },
+      "2018-09": {
+        "wind": 0.998,
+        "power": 0.998,
+        "nacelle_temperature": 0.998
+      },
+      "2018-10": {
+        "wind": 1.0,
+        "power": 1.0,
+        "nacelle_temperature": 1.0
+      },
+      "2018-11": {
+        "wind": 1.0,
+        "power": 1.0,
+        "nacelle_temperature": 1.0
+      },
+      "2018-12": {
+        "wind": 0.999,
+        "power": 0.999,
+        "nacelle_temperature": 0.999
+      }
+    }
+  },
+  "notable_stops": {
+    "kelmarsh": {
+      "longest_stop": [
+        {
+          "start": "2018-10-23 01:47:27",
+          "end": "2018-11-02 16:32:47",
+          "hours": 254.75555555555556,
+          "Code": 3590,
+          "Message": "Overvoltage",
+          "IEC category": "Out of Electrical Specification"
+        }
+      ],
+      "stops_6_to_9_march": [
+        {
+          "start": "2018-03-06 13:32:25",
+          "end": "2018-03-06 14:42:27",
+          "hours": 1.1672222222222222,
+          "Code": 20,
+          "Message": "Manual stop - on site",
+          "IEC category": "Scheduled Maintenance"
+        },
+        {
+          "start": "2018-03-06 14:43:53",
+          "end": "2018-03-09 12:52:51",
+          "hours": 70.14944444444444,
+          "Code": 710,
+          "Message": "Battery test",
+          "IEC category": "Technical Standby"
+        },
+        {
+          "start": "2018-03-09 12:54:00",
+          "end": "2018-03-09 13:17:49",
+          "hours": 0.39694444444444443,
+          "Code": 710,
+          "Message": "Battery test",
+          "IEC category": "Technical Standby"
+        }
+      ]
+    },
+    "penmanshiel": {
+      "longest_stop": [
+        {
+          "start": "2018-02-27 05:09:42",
+          "end": "2018-03-04 19:13:03",
+          "hours": 134.05583333333334,
+          "Code": 6690,
+          "Message": "Icing (stop)",
+          "IEC category": "Out of Environmental Specification"
+        }
+      ],
+      "longest_stop_february_to_may": [
+        {
+          "start": "2018-02-27 05:09:42",
+          "end": "2018-03-04 19:13:03",
+          "hours": 134.05583333333334,
+          "Code": 6690,
+          "Message": "Icing (stop)",
+          "IEC category": "Out of Environmental Specification"
+        }
+      ]
+    }
+  },
+  "penmanshiel_missing_temperature": {
+    "rebuilt_hours": 8749,
+    "public_hours": 6432,
+    "hours_missing_from_public": 2317,
+    "share_of_year": 0.26449771689497714,
+    "with_positive_power": 1910,
+    "overlapping_a_stop": 177,
+    "months": [
+      "2018-02",
+      "2018-03",
+      "2018-04",
+      "2018-05"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "rows": 126,
+  "unmatched_rows": 0,
+  "max_abs_diff_pp": 1.383418322120633e-07,
+  "max_abs_seed_mean_diff_pp": 2.4702670131659943e-08,
+  "max_abs_seed_std_diff_pp": 3.175689888834654e-08,
+  "hour_convention": {
+    "kelmarsh": {
+      "raw_rows": 52560,
+      "start_of_hour": {
+        "hours_compared": 8470,
+        "wind_max_abs_diff": 1.7763568394002505e-15,
+        "wind_share_within_1e-6": 1.0
+      },
+      "end_of_hour": {
+        "hours_compared": 8470,
+        "wind_max_abs_diff": 5.759994824727377,
+        "wind_share_within_1e-6": 0.0
+      }
+    },
+    "penmanshiel": {
+      "raw_rows": 52560,
+      "start_of_hour": {
+        "hours_compared": 6432,
+        "wind_max_abs_diff": 3.552713678800501e-15,
+        "wind_share_within_1e-6": 1.0
+      },
+      "end_of_hour": {
+        "hours_compared": 6432,
+        "wind_max_abs_diff": 7.7683333555857415,
+        "wind_share_within_1e-6": 0.0
+      }
+    }
+  },
+  "test_window_wind": {
+    "kelmarsh": {
+      "pretest_mean_ms": 5.985998535545901,
+      "test_mean_ms": 6.783873531398674,
+      "test_first_hour": "2018-11-20 08:00:00",
+      "test_last_hour": "2018-12-31 23:00:00"
+    },
+    "penmanshiel": {
+      "pretest_mean_ms": 7.229855831812521,
+      "test_mean_ms": 8.055528212112685,
+      "test_first_hour": "2018-11-20 08:00:00",
+      "test_last_hour": "2018-12-31 23:00:00"
+    }
+  }
+}
