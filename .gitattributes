@@ -1,0 +1,5 @@
+# Checked files: never convert line endings, so that the SHA-256 sums and expected/ stay byte-identical.
+preprint/** -text
+archived/** -text
+expected/** -text
+config/** -text
