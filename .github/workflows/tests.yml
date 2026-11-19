@@ -1,0 +1,32 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  unit:
+    # Unit tests, the claim checks against expected/ and the SHA-256 checks of preprint/ and archived/.
+    # They need no SCADA data and no TensorFlow; tests marked "reproduction" need stored outputs and are skipped.
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {os: ubuntu-latest, python: "3.9"}
+          - {os: ubuntu-latest, python: "3.12"}
+          - {os: macos-latest, python: "3.12"}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -e ".[test]"
+      - run: pytest -m "not reproduction" -q
+  pinned:
+    # The versions of requirements.txt, as used for the published results (without TensorFlow, which no test needs).
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+      - run: grep -v '^tensorflow' requirements.txt > ci-requirements.txt && pip install -r ci-requirements.txt
+      - run: pip install -e ".[test]"
+      - run: pytest -m "not reproduction" -q
